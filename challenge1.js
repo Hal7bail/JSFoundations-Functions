@@ -3,7 +3,10 @@
  * Create a function named `printName`
  * - that just prints your name on the screen
  */
-
+function printName() {
+console.log("Hadeel");
+}
+printName ();
 /**
  * Task 2:
  * Create a function named `printAge`
@@ -11,7 +14,12 @@
  * - and prints the age on the screen.
  * - Age = current year - birth
  */
-
+function printAge(birthYear){
+    const currentYear = 2022;
+    const age = currentYear - birthYear;
+    console.log(age);
+}
+printAge(1996);
 /**
  * Task 3:
  * Create a function named `printHello`
@@ -22,10 +30,37 @@
  * -- fr: it should print `Bonjour NAME`
  * -- tr: it should print `Merhaba NAME`
  */
-
+function printHello(name, language){
+    language = language.toLowerCase();
+if (language === "en"){
+    console.log(`hello ${name}`);
+} else if (language === "es") {
+    console.log(`hola ${name}`);
+} else if (language === "fr") {
+    console.log (`bonjour ${name}`);
+} else if (language === "tr") {
+    console.log (`merhaba ${name}`);
+} else {
+console.log("language not there")
+}}
+printHello("hadeel","es");
 /**
  * Task 4:
  * Create a function named `printMax`
  * - that takes 2 parameters as numbers
- * - should print out the bigger number
+ * - should print out the bigger number as the following format `n1 > n2`
+ * - should print equals if they are equal
  */
+function printMax (n1 ,n2) {
+    if (n1>n2){
+        console.log (`${n1}>${n2}`);
+    } else if (n2 >n1){
+        console.log(`${n2}>${n1}`);
+    } else {
+console.log (`${n1} == ${n2}`);
+    }
+}
+printMax (2,7);
+printMax (1,6);
+printMax (10,3);
+printMax (4,4);
